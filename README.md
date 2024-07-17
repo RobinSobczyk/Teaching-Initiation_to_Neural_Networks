@@ -28,3 +28,4 @@ Idées en vrac :
 - [ ] détailler chaque point du sommaire
 - [ ] mettre une licence
 - [ ] regarder comment share (gitfront.io ?)
+- [ ] ajouter un `requirements.txt`
