@@ -23,8 +23,8 @@ Idées en vrac :
 - faire une boucle d'entrainement
 - savoir identifier l'overfitting
 
-À faire :  
-[] faire un vrai sommaire avec un vrai découpage  
-[] détailler chaque point du sommaire  
-[] mettre une licence  
-[] regarder comment share (gitfront.io ?)
+À faire :
+- [ ] faire un vrai sommaire avec un vrai découpage
+- [ ] détailler chaque point du sommaire
+- [ ] mettre une licence
+- [ ] regarder comment share (gitfront.io ?)
