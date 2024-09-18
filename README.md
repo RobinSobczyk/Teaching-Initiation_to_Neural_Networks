@@ -14,15 +14,6 @@ In this course, you will learn :
 - how to run basic analysis of the activations with heatmaps
 - what are the limits of neural networks with some measures of random effects
 
-Idées en vrac :
-- Représentation diverses (CNN)
-- Front and back flow
-- JAX/torch.func
-- Automatic diff
-- Overfitting, underfitting
-- faire une boucle d'entrainement
-- savoir identifier l'overfitting
-
 À faire :
 - [x] faire un vrai sommaire avec un vrai découpage
 - [x] détailler chaque point du sommaire
@@ -30,6 +21,7 @@ Idées en vrac :
 - [ ] regarder comment share (gitfront.io ?)
 - [ ] ajouter un `requirements.txt`
 - [ ] mettre le code sous forme de module (le nettoyer au passage)
+- [ ] aligner le readme avec les summary des cours
 
 ### Sommaire provisoire :  
 Cours 0 : Introduction :
@@ -45,10 +37,11 @@ Cours 1 : Les premiers réseaux :
 - faire une boucle d'entrainement
 - types d'apprentissage (supervisé, non supervisé, semi supervisé)
 
-Cours 2 : présenter, représenter et lire les réseauxn leurs résultats
+Cours 2 : présenter, représenter et lire les réseaux, leurs résultats
 - Overfitting, underfitting
 - savoir identifier l'overfitting
 - how to create and read a computation flow of a neural network
+- how to represent neural networks along their computation flow (représentations diverses, CNN etc)
 - how to debug your neural network through gradient inspection, gradient vanishing and exploding
 - seeding, source code and reproducibility
 - GPU and reproducibility
