@@ -22,6 +22,7 @@ In this course, you will learn :
 - [ ] ajouter un `requirements.txt`
 - [ ] mettre le code sous forme de module (le nettoyer au passage)
 - [ ] aligner le readme avec les summary des cours
+- [ ] préciser les versions de python recommandées dans le cours 0
 
 ### Sommaire provisoire :  
 Cours 0 : Introduction :
