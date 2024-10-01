@@ -89,8 +89,8 @@ class MyHDL(_Loss):
             ]
         )
 
-    def initialize(self, dataloader: DataLoader, model: torch.nn.Module) -> None:
-        self.centerloss.initialize(dataloader, model)
+    def initialize(self, model: torch.nn.Module, dataloader: DataLoader) -> None:
+        self.centerloss.initialize(model, dataloader)
 
     def epoch_update(self) -> None:
         self.centerloss.epoch_update()

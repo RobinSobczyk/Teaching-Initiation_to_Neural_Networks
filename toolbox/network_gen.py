@@ -43,6 +43,7 @@ class CifarResNet(nn.Module):
     r"""Corresponds to the implementation made for CIFAR-10 in https://doi.org/10.1109/CVPR.2016.90"""
 
     def __init__(self, n: int, out_dim: int, input_chans: int = 3):
+        r"""Network will have 6n+2 layers, as described in the paper"""
         super(CifarResNet, self).__init__()
         self.conv1 = nn.Conv2d(input_chans, 16, kernel_size=3, padding=1, bias=False)
         self.bn = nn.BatchNorm2d(16)

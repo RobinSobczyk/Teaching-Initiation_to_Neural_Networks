@@ -226,7 +226,7 @@ class BridgeGraph(object):
         r"""Return the torch.fx.GraphModule the BridgeGraph is working on"""
         return self.get_fx()
 
-    # useful methods on torch.fx.GraphModule
+    # region : useful methods on torch.fx.GraphModule
 
     def add_submodule(self, target: str, module: torch.nn.Module) -> bool:
         r"""Refer to torch.fx documentation, torch.fx.GraphModule method of same name"""
@@ -255,7 +255,9 @@ class BridgeGraph(object):
         r"""Return the torch.fx.Graph corresponding to the GraphModule"""
         return self.get_fx().graph
 
-    # useful methods on torch.fx.Graph
+    # endregion
+
+    # region : useful methods on torch.fx.Graph
 
     def lint(self) -> None:
         r"""Refer to torch.fx documentation, torch.fx.Graph method of same name"""
@@ -277,13 +279,15 @@ class BridgeGraph(object):
         r"""Refer to torch.fx documentation, torch.fx.Graph method of same name"""
         return self.__fx_model.graph.inserting_before(node)
 
+    # endregion
+
     # getting torch.fx node from networkx name
 
     def get_fx_node(self, nx_node_name: str) -> torch.fx.Node:
         r"""return torch.fx Node corresponding to the node of name ``nx_node_name`` in the NetworkX graph"""
         return self.__nx_graph.nodes.data()[nx_node_name]["fx_node"]
 
-    # function to add/modify args/kwargs
+    # region : function to add/modify args/kwargs
 
     def add_arg_kwarg(
         self,
@@ -418,7 +422,9 @@ class BridgeGraph(object):
                     )
         fx_node.kwargs = kwargs
 
-    # adapted networkx methods
+    # endregion
+
+    # region : adapted networkx methods
 
     def add_node(
         self,
@@ -631,6 +637,8 @@ class BridgeGraph(object):
                 )
                 fx_child_node.update_kwarg(position, new_kwarg)
 
+    # endregion
+
     # update networkx part from torch.fx part, useful after some custom commands like ``bridge_graph.get_fx().command``, recompile may be needed
 
     def update_nx(self) -> None:
@@ -646,12 +654,13 @@ class BridgeGraph(object):
 
     # plotting networkx part
 
-    def plot(self, x: float, y: float) -> None:
+    def plot(self, x: float, y: float) -> plt.Figure:
         r"""Plot the NetworkX graph with matplotlib.
         Does not currently support parallel edges.
         """
         # ToDo add support for multiedges
-        plt.figure(figsize=(x, y))
+        fig = plt.figure(figsize=(x, y))
+        ax = fig.gca()
         pos = nx.nx_agraph.pygraphviz_layout(self.__nx_graph, prog="dot")
         colors = plt.cm.get_cmap("hsv", len(self.__nx_graph.dict) + 1)
         i = 0
@@ -662,19 +671,20 @@ class BridgeGraph(object):
                 pos=pos,
                 nodelist=self.__nx_graph.dict[x],
                 node_color=np.array([colors(i)]),
+                ax=ax,
             )
             patch = mpatches.Patch(color=colors(i), label=x)
             handles.append(patch)
             i += 1
-        plt.legend(handles=handles)
+        ax.legend(handles=handles)
         plt.autoscale(enable=True)
-        nx.draw_networkx_edges(self.__nx_graph, pos)
+        nx.draw_networkx_edges(self.__nx_graph, pos, ax=ax)
         label_dict = {}
         for u, v, data in self.__nx_graph.edges(data=True):
             if "label" in data:
                 label_dict[(u, v)] = data["label"]
         nx.draw_networkx_edge_labels(
-            self.__nx_graph, pos, edge_labels=label_dict, rotate=False
+            self.__nx_graph, pos, edge_labels=label_dict, rotate=False, ax=ax
         )
-        nx.draw_networkx_labels(self.__nx_graph, pos)
-        plt.show()
+        nx.draw_networkx_labels(self.__nx_graph, pos, ax=ax)
+        return fig

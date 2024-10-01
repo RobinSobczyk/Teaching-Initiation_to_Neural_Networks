@@ -82,8 +82,8 @@ def train_net(
                 model.train()
                 if accuracy_meter is not None:
                     temp_acc = accuracy_meter.zero()
+                temp_losses = []
                 for batch_id, (batch_data, batch_truth) in enumerate(trainloader):
-                    temp_losses = []
                     out = model(batch_data.to(device))
                     optimizer.zero_grad()
                     loss_value = loss(out, batch_truth.to(device))
@@ -116,8 +116,8 @@ def train_net(
             model.eval()
             if accuracy_meter is not None:
                 temp_acc = accuracy_meter.zero()
+            temp_losses = []
             for batch_id, (batch_data, batch_truth) in enumerate(valloader):
-                temp_losses = []
                 out = model(batch_data.to(device))
                 loss_value = loss(out, batch_truth.to(device))
                 if accuracy_meter is not None:
@@ -135,8 +135,8 @@ def train_net(
         model.eval()
         if accuracy_meter is not None:
             temp_acc = accuracy_meter.zero()
+        temp_losses = []
         for batch_id, (batch_data, batch_truth) in enumerate(testloader):
-            temp_losses = []
             out = model(batch_data.to(device))
             loss_value = loss(out, batch_truth.to(device))
             if accuracy_meter is not None:
