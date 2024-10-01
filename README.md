@@ -49,8 +49,8 @@ Cours 2 : présenter, représenter et lire les réseaux, leurs résultats
 
 Cours 3 : Les limites techniques de l'IA :
 - explainability/trust
-- what are the risks of neural networks with malicious sample optimisation (GANs ?)
 - how to run basic analysis of the activations with heatmaps
+- what are the risks of neural networks with malicious sample optimisation (GANs ?)
 - what are the limits of neural networks with some measures of random effects
 - proxy values
 
