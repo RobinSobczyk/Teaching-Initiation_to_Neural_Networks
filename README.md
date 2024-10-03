@@ -19,8 +19,11 @@ In this course, you will learn :
 - [x] détailler chaque point du sommaire
 - [ ] mettre une licence
 - [ ] regarder comment share (gitfront.io ?)
-- [ ] ajouter un `requirements.txt`
-- [ ] mettre le code sous forme de module (le nettoyer au passage)
+- [x] ajouter un `requirements.txt`
+- [ ] ajouter tous les modules dans le `requirements.txt`
+- [ ] ajouter les versions des modules dans le `requirements.txt`
+- [x] mettre le code sous forme de module
+- [ ] nettoyer le code dans le module
 - [ ] aligner le readme avec les summary des cours
 - [ ] préciser les versions de python recommandées dans le cours 0
 
