@@ -34,12 +34,13 @@ Cours 0 : Introduction :
 - different types of networks and use (quick overview of different type of tasks, type of operations, use in other frameworks like RL)
 
 Cours 1 : Les premiers réseaux :
-- Front and back flow, principles of training, theory for density
+- how do we train a neural network (forward pass, backpropagation)
 - how to code a neural network from scratch
-- Automatic diff
-- how to code your first neural network with PyTorch and train it
-- faire une boucle d'entrainement
-- types d'apprentissage (supervisé, non supervisé, semi supervisé)
+- PyTorch and autograd (automatic differentiation)
+- how to setup the training on a CPU or a GPU
+- how to code a neural network with PyTorch and train it
+- how to save and load your model
+- classic forms of training
 
 Cours 2 : présenter, représenter et lire les réseaux, leurs résultats
 - Overfitting, underfitting
@@ -51,11 +52,10 @@ Cours 2 : présenter, représenter et lire les réseaux, leurs résultats
 - GPU and reproducibility
 
 Cours 3 : Les limites techniques de l'IA :
-- explainability/trust
-- how to run basic analysis of the activations with heatmaps
-- what are the risks of neural networks with malicious sample optimisation (GANs ?)
-- what are the limits of neural networks with some measures of random effects
-- proxy values
+- explainability of a neural network model
+- trust in its results and capacity to correctly solve its task (proxy values)
+- how to realise a basic analysis of the activations of a network with heatmaps
+- an example of one of the risks of neural networks: malicious sample optimization
 
 Cours 4 : Ethique sociale :
 - les datasets et l'IA générative
