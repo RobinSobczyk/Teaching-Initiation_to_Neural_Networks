@@ -17,7 +17,7 @@ In this course, you will learn :
 À faire :
 - [x] faire un vrai sommaire avec un vrai découpage
 - [x] détailler chaque point du sommaire
-- [ ] mettre une licence
+- [x] mettre une licence
 - [ ] regarder comment share (gitfront.io ?)
 - [x] ajouter un `requirements.txt`
 - [ ] ajouter tous les modules dans le `requirements.txt`
@@ -87,3 +87,7 @@ Cours 5 : Approfondissement :
   - re auto-diff
   - densité
 - ressources utiles
+
+### License
+
+This course is distributed under the [Academic Public License](LICENSE.txt)
