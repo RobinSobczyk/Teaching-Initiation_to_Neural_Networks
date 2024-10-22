@@ -23,7 +23,7 @@ This course aims to make the following knowledge accesible to all :
 - [ ] ajouter tous les modules dans le `requirements.txt`
 - [ ] ajouter les versions des modules dans le `requirements.txt`
 - [x] mettre le code sous forme de module
-- [ ] nettoyer le code dans le module
+- [x] nettoyer le code dans le module
 - [x] aligner le readme avec les summary des cours
 - [ ] préciser les versions de python recommandées dans le cours 0
 
