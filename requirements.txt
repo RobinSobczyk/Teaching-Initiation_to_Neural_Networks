@@ -1,6 +1,10 @@
-torch
-matplotlib
-numpy
-ipympl
-networkx
-pygraphviz
+torch >= 2.4.1
+matplotlib >= 3.8.0
+numpy >= 1.26.4
+ipympl >= 0.9.4
+networkx >= 3.3
+pygraphviz >= 1.9
+torchvision >= 0.19.1
+scikit-learn >= 1.2.2
+tqdm >= 4.66.1
+pillow >= 10.2.0
