@@ -14,19 +14,6 @@ This course aims to make the following knowledge accesible to all :
 - how to run basic analysis of the activations with heatmaps
 - the ethical concerns raised by deep learning
 
-À faire :
-- [x] faire un vrai sommaire avec un vrai découpage
-- [x] détailler chaque point du sommaire
-- [x] mettre une licence
-- [ ] regarder comment share (gitfront.io ?)
-- [x] ajouter un `requirements.txt`
-- [x] ajouter tous les modules dans le `requirements.txt`
-- [x] ajouter les versions des modules dans le `requirements.txt`
-- [x] mettre le code sous forme de module
-- [x] nettoyer le code dans le module
-- [x] aligner le readme avec les summary des cours
-- [x] préciser les versions de python recommandées dans le cours 0
-
 ### Table of content  
 Course 0: Introduction
 - what is an artificial neuron and how it is linked to biological neurons
